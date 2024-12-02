@@ -7,7 +7,7 @@ const cookieParser = require('cookie-parser')
 const authRouter = require("./routes/auth/auth-routes")
 const adminProductRoute = require("./routes/admin/products-routes")
 
-mongoose.connect("mongodb+srv://hitesh:hitesh2024@cluster0.tdszj.mongodb.net/")
+mongoose.connect(process.env.MongoDB_url)
     .then(() => { console.log("MongoDB Connection Successful") })
     .catch((err) => { console.log("MongoDB connection fail", err) })
 
